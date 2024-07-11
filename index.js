@@ -14,7 +14,7 @@ const upload = multer({
 
 
 // application routes
-app.post('/', upload.single('avater'), (req, res) => {
+app.post('/', upload.array('avater', 3), (req, res) => {
     res.send('File uploaded succesfully');
 });
 
